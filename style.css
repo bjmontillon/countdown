@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+.days {
+    grid-area: days;
+}
+.hours {
+    grid-area: hours;
+}
+.minutes {
+    grid-area: minutes;
+}
+.seconds {
+    grid-area: seconds;
+}
+.item1 {
+    grid-area: item1;
+}
+.item2 {
+    grid-area: item2;
+}
+.item3 {
+    grid-area: item3;
+}
+.item4 {
+    grid-area: item4;
+}
+
+
+:root {
+
+    /* Primary */
+
+    --Grayish-blue: hsl(237, 18%, 59%);
+    --Soft-red: hsl(345, 95%, 68%);
+    
+    /* Neutral */
+    
+    --White: hsl(0, 0%, 100%);
+    --Dark-desaturated-blue: #343650;
+    --Very-dark-blue: #1e1f29;
+    --Very-dark-mosk: #191a24;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    background-color: var(--Very-dark-mosk);
+    background-image: url(./images/pattern-hills.svg), url(./images/bg-stars.svg );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    font-family: 'Red Hat Text', sans-serif;
+    padding:10%;
+}
+
+h1 {
+    color: var(--White);
+    text-align: center;
+    position:relative;
+    margin-bottom: 30px;
+    letter-spacing: 7px;
+}
+
+p {
+    text-align: center;
+    position:relative;
+}
+
+.main-container {
+    display: grid;
+    height: 200px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    height: 200px;
+    grid-template-columns: 150px 150px 150px 150px;
+    grid-template-rows: 1fr 50px;
+    grid-template-areas: 
+    "days hours minutes seconds"
+    "item1 item2 item3 item4";
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    column-gap:20px;
+}
+
+.container > div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container .days {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: rgb(52,54,80);
+    background: linear-gradient(180deg, rgba(52,54,80,1) 0%, rgba(84,86,112,1) 48%, rgba(52,54,80,1) 100%);
+    height: 9.375rem;
+    width: 9.375rem;
+    border-radius: 10px;
+    font-size: 5rem;
+    box-shadow: 0 4px 4px black;
+}
+.container .hours {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: rgb(52,54,80);
+    background: linear-gradient(180deg, rgba(52,54,80,1) 0%, rgba(84,86,112,1) 48%, rgba(52,54,80,1) 100%);
+    height:9.375rem;
+    width:9.375rem;
+    border-radius: 10px;
+    font-size: 5rem;
+    box-shadow: 0 4px 4px black;
+}
+.container .minutes {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: rgb(52,54,80);
+    background: linear-gradient(180deg, rgba(52,54,80,1) 0%, rgba(84,86,112,1) 48%, rgba(52,54,80,1) 100%);
+    height:9.375rem;
+    width:9.375rem;
+    border-radius: 10px;
+    font-size: 5rem;
+    box-shadow: 0 4px 4px black;
+}
+.container .seconds {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: rgb(52,54,80);
+    background: linear-gradient(180deg, rgba(52,54,80,1) 0%, rgba(84,86,112,1) 48%, rgba(52,54,80,1) 100%);
+    height:9.375rem;
+    width:9.375rem;
+    border-radius: 10px;
+    font-size: 5rem;
+    box-shadow: 0 4px 4px black;
+}  
+
+.container .item1 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: var(--Grayish-blue);
+}
+.container .item2 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: var(--Grayish-blue);
+}
+.container .item3 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: var(--Grayish-blue);
+}
+.container .item4 {
+    font-size: 20px;
+    letter-spacing: 5px;
+    color: var(--Grayish-blue);
+}
+
+.container #days {
+    color: var(--Soft-red);
+}
+.container #hours {
+    color: var(--Soft-red);
+}
+.container #minutes {
+    color: var(--Soft-red);
+}.container #seconds {
+    color: var(--Soft-red);
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+
+.social ul {
+    list-style-type: none;
+    display:flex;
+}
+
+.social li {
+    margin-left: 20px;
+}
+
+.social a {
+    color: var(--Grayish-blue);
+}
+
+.social a:hover {
+    background-color: aliceblue;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.attribution { 
+    font-size: 15px; 
+    text-align: center;
+    letter-spacing: 3px;
+    
+}
+
+.attribution a { 
+    color: white;
+    letter-spacing: 3px; 
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 375px) {
+
+
+    html {
+        height: 100%;
+    }
+    html body {
+    padding: 30% 12px 10px 12px;
+    width: 100%;
+    
+}
+
+    h1 {
+        margin-top: 40px;
+        font-size: 20px;
+    }
+    .main-container {
+        width: 100%;
+     }
+
+    .container {
+        width: 330px;
+        display: grid;
+        height: 100px;
+        grid-template-columns: 75px 75px 75px 75px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "days hours minutes seconds"
+            "item1 item2 item3 item4";
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        column-gap: 10px;
+    }
+
+    .container .days {
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background: rgb(52,54,80);
+        background: linear-gradient(180deg, rgba(52,54,80,1) 0%, rgba(84,86,112,1) 48%, rgba(52,54,80,1) 100%);
+        height: 75px;
+        width:75px;
+        border-radius: 10px;
+        font-size: 3rem;
+    }
+    .container .hours {
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background: rgb(52,54,80);
+        background: linear-gradient(180deg, rgba(52,54,80,1) 0%, rgba(84,86,112,1) 48%, rgba(52,54,80,1) 100%);
+        height: 75px;
+        width:75px;
+        border-radius: 10px;
+        font-size: 3rem;
+    }
+    .container .minutes {
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background: rgb(52,54,80);
+        background: linear-gradient(180deg, rgba(52,54,80,1) 0%, rgba(84,86,112,1) 48%, rgba(52,54,80,1) 100%);
+        height: 75px;
+        width:75px;
+        border-radius: 10px;
+        font-size: 3rem;
+    }
+    .container .seconds {
+        display:flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background: rgb(52,54,80);
+        background: linear-gradient(180deg, rgba(52,54,80,1) 0%, rgba(84,86,112,1) 48%, rgba(52,54,80,1) 100%);
+        height: 75px;
+        width:75px;
+        border-radius: 10px;
+        font-size: 3rem;
+    }
+
+    .container .item1 {
+        font-size: 8px;
+        color: var(--Grayish-blue);
+    }
+    .container .item2 {
+        font-size: 8px;
+        color: var(--Grayish-blue);;
+    }
+    .container .item3 {
+        font-size: 8px;
+        color: var(--Grayish-blue);
+    }
+    .container .item4 {
+        font-size: 8px;
+        color: var(--Grayish-blue);
+    }
+
+    .attribution {
+        font-size: 15px;
+        bottom: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: fixed;
+        margin-left: 30px;
+    }
+
+    .attribution a {
+        font-size: 10px;
+        color: white;
+        
+    }
+}
+
